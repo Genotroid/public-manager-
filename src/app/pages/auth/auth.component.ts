@@ -1,12 +1,12 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './services/auth.service';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.less'],
+    selector: 'app-auth',
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.less'],
 })
-export class AppComponent implements OnInit {
+export class AuthComponent implements OnInit {
     constructor(private authService: AuthService) {}
 
     ngOnInit(): void {
@@ -14,5 +14,4 @@ export class AppComponent implements OnInit {
             console.log(response);
         });
     }
-    title = 'publicManager';
 }
