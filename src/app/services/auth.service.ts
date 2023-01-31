@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,11 +12,10 @@ export class AuthService {
         const apiUrl = 'https://oauth.vk.com/authorize';
         const params = {
             client_id: 51525532,
-            display: 'popup',
-            redirect_uri: 'http://localhost:4200',
+            display: 'page',
             scope: 'groups',
+            redirect_uri: 'http://localhost:4200',
             response_type: 'token',
-            v: '5.131',
         };
         const queryParams = new HttpParams({ fromObject: params });
 
